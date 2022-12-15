@@ -1,0 +1,69 @@
+
+<html>
+    <head>
+        <title>MakersBnB</title>
+
+        <!--
+            Head to https://github.com/makersacademy/web-applications/blob/main/pills/loading_css_or_static_files.md
+            If youre wondering how the CSS file below is being loaded.
+        -->
+        <link rel="stylesheet" href="/styles.css" type="text/css">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+
+    <% if session[:session_email] %>
+  Welcome, <%= @user.username %>
+
+
+        <nav><form action="/logout" method="post">
+    <input class="logout" type="submit" value="Sign out"/>
+    </form>
+    </nav>
+
+        <%else%>
+
+<nav>
+    <form action="/registrations/signup">
+    <input type="submit" value="Join airbNb"/>
+  </form>
+  <form action="/sessions/login">
+    <input type="submit" value="Sign in"/>
+  </form>
+  </nav>
+    <h1>MakersBNB</h1>
+        <div class="btn-container">
+        <button class="new-space-btn" type="button"><a class="new-space-link" href="/spaces/new">Click to add a listing</a></button>
+        </div>
+        <br>
+  <form action="/" method="POST">
+    <input class="date-availability" type="date" name="dates"/>
+    <input class="check-availability" type="submit" value="Check Availability">
+  </form>
+  <br>
+        <% end %>
+
+        <div class="listings">
+           <% @all_spaces.each do |space| %>
+            <p>
+            NAME: <a href="/spaces/<%=space.id%>"> <%=space.name%></a>
+            <br>
+            DESCRIPTION: <%= space.description %>
+            <br>
+            PRICE: £<%= space.price %>
+            <br>
+            <a href="/spaces/book/<%=space.id%>"> Book this space</a>
+            
+            <br>
+            <br>
+            </p>
+            <% end %>
+        </div>
+
+
+        <footer>
+        <p>Abdullah, Gregory, James, Jason, Jean, Leroy - 2022</p>
+        </footer>
+    </body>
+</html>

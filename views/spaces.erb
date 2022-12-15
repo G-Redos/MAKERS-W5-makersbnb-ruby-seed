@@ -1,0 +1,23 @@
+<html>
+  <head>
+        <link rel="stylesheet" href="/styles.css" type="text/css">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+      </head>
+  <body>
+<div class="center">
+<div class="center-listing">
+<div class="listings">
+    <h2> <%= @space.name %> </h2>
+    <p>
+    Description: <%= @space.description %>
+    <br>
+    Price: <%= @space.price %>
+    <br>
+    <a href="book/<%=@space.id%>">Click here to book</a>
+    </p>
+</div>
+</div>
+</div>
+
+  </body>
+</html>

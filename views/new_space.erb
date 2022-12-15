@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" href="/styles.css" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+  <nav><a href="/signup">Signup</a>  <a href="/login">Login</a>  <a href="/">Spaces</a></nav>
+  
+  
+  <div class="center"><h1 class="center-listing">List a Space</h1></div>
+
+  <form class="listings-new" action="/spaces/new" method="POST">
+    <input type="text" name="name" placeholder="name"><br>
+    <input type="text" name="description" placeholder="description"><br>
+    <input type="number" name="price" placeholder="price per night"><br>
+    <input class="list-btn" type="submit" value="List space">
+  </form>
+
+
+</body>
+</html>

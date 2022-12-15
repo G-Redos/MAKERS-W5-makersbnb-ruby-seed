@@ -1,0 +1,17 @@
+<html>
+  <head>
+          <link rel="stylesheet" href="/styles.css" type="text/css">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        
+  </head>
+  <body>
+
+    <h1> Book <%= @space.name %> </h1>
+    
+    <form action="/spaces/book/<%=@space.id%>" method="POST">
+    <label for="dates">Date:</label>
+    <input class="date-availability" type="date" name="dates"/>
+    <input class="check-availability" type ="submit" value = "Book">
+  </form>
+  </body>
+  </html>  

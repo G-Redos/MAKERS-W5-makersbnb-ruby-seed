@@ -1,0 +1,114 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-image: url("/background_image2.png");
+    background-size: 150%;
+}
+
+
+h1 {
+    color: #FF385C;
+    font-size: 3rem;
+    padding-left: 5%;
+}
+
+h2{
+    color: #FF385C;
+}
+
+nav{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-weight: 600;
+    color: #FF385C;
+}
+
+a {
+    color: #FF385C;
+}
+
+a:hover{
+    background-color: #e7e7e7;
+}
+
+.btn-container{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.new-space-btn{
+   border: 3px solid #FF385C;
+   padding: 15px 32px;
+   text-align: center;
+   border-radius: 8px; 
+   font-family: "Montserrat", sans-serif;
+   background-color: white;
+}
+
+.new-space-btn:hover{
+    background-color: #e7e7e7;
+}
+
+.listings{
+    margin: auto;
+    width: 500px;
+    border: 3px solid #FF385C;
+    border-radius: 8px; 
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+}
+
+.listings-new{
+    margin: auto;
+    width: 20%;
+    border: 3px solid #FF385C;
+    border-radius: 8px; 
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+}
+
+form {
+    text-align: center;
+}
+
+.check-availability{
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    border: 3px solid #FF385C;
+    background-color: white;
+    border-radius: 8px; 
+}
+
+.check-availability:hover{
+    background-color: #e7e7e7;
+}
+
+.date-availability{
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+}
+
+footer{
+    text-align: center;
+    color: #FF385C;
+    position: relative;
+    margin-top: 100px;
+    font-weight: 600;
+}
+
+.list-btn{
+    background-color: #FF385C;
+    color: white;
+}
+
+.center {
+    position: relative;
+    text-align: center;
+}
+
+.center-listing {
+    display: inline-block;
+}

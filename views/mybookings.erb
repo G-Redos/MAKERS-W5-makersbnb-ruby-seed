@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MakersBnB - Your bookings</title>
+</head>
+    <body>
+
+    <h1> My renter bookings  </h1>
+    
+           <% @renter_bookings.each do |booking| %>
+            <p>
+            NAME:  <%=booking.info[0][:name]%>
+            <br>
+            
+            <br>
+            CONFIRMATION: <%if booking.confirmation == 'f' %>
+            PENDING: <%= booking.booking_date%>
+            <%else%>
+            CONFIRMED: <%= booking.booking_date%>
+            <% end %>
+            <br>
+            </p>
+            <% end %>
+
+    <h1> My host bookings  </h1>
+    
+           <% @host_bookings.each do |host_booking| %>
+            <p>
+            NAME: <%=host_booking.info[0][:name]%>
+            <br>
+            USER: <%=host_booking.info[0][:username]%>
+            <br>
+            PRICE: £<%= host_booking.total_cost %>
+            <br>
+            CONFIRMATION: <% if host_booking.confirmation == 't' %>
+            CONFIRMED: <%= host_booking.booking_date%>
+            <% else %>
+            PENDING CONFIRMATION: <%= host_booking.booking_date%>
+            
+            <br>
+            <form action="/mybookings/success/:id" method="POST">
+            <input type ="submit" value = "Confirm">
+            <input type="hidden" name = "booking_id" value = <%=host_booking.id%>
+            </form>
+            </p>
+            <% end %>
+            <% end %>
+
+    <a href="/">Back to Homepage</a>
+        
+        </body>
+  </html>  
